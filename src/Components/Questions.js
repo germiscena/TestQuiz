@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Questions.scss";
 import { useNavigate } from "react-router";
 const Questions = () => {
+  const quest = ["Сколько вам лет?", "Какой у вас тип кожи?", "Беспокоят ли воспаления на лице?"];
   const answers = [
     [
       "Нужны средства для ребёнка младше 10 лет",
@@ -55,7 +56,7 @@ const Questions = () => {
         )}
       </div>
       <p className='Questions_questionNumber'>Вопрос {question + 1} из 3</p>
-      <h1 className='Questions_question'>Сколько вам лет?</h1>
+      <h1 className='Questions_question'>{quest[question]}</h1>
       <div className='Questions_answers'>
         {answers[question].map((item, index) => {
           return (
